@@ -2,7 +2,7 @@
 
 **A Multi-Branch Approach to Misinformation Detection**
 
-This repository contains the implementation of the manuscript *"Disentangling Visual, Semantic, and Factual Deception: A Multi-Branch Approach to Misinformation Detection"*.
+This repository contains the implementation of the manuscript *"Disentangling Visual, Semantic, and Factual Deception: A Multi-Branch Approach to Misinformation Detection"* *(added soon)*.
 
 ## Project Overview
 
