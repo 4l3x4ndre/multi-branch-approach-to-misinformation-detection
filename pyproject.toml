@@ -1,0 +1,85 @@
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "corpus_truth_manipulation"
+version = "0.0.1"
+description = "AI system that detects text-image inconsistencies in social media posts and news articles"
+authors = [
+  { name = "Alexandre Amrani" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+dependencies = [
+	"black",
+	"flake8",
+	"ipython",
+	"isort",
+	"jupyterlab",
+	"loguru",
+	"matplotlib",
+	"mkdocs",
+	"notebook",
+	"numpy",
+	"pandas",
+	"pip",
+	"pytest",
+	"python-dotenv",
+	"scikit-learn",
+	"tqdm",
+	"typer",
+	"seaborn",
+	"torch",
+	"torchvision",
+	"wandb",
+	"python-dotenv",
+	"spacy",
+	"pyvis",
+	"networkx",
+	# CLIP:
+	"ftfy",
+	"regex",
+	"clip @ git+https://github.com/openai/CLIP.git",
+
+	"tqdm",
+	"hydra-core",
+	"transformers",
+
+	"torch_geometric",
+
+	"SPARQLWrapper",
+	"cachetools",
+	"sentence-transformers",
+	"optuna (>=4.5.0,<5.0.0)",
+	"optuna-dashboard (>=0.19.0,<0.20.0)",
+	"streamlit (>=1.51.0,<2.0.0)",
+	"plotly-express (>=0.4.1,<0.5.0)",
+	"pyppeteer (>=2.0.0,<3.0.0)",
+	"pysvg (>=0.2.2,<0.3.0)",
+]
+requires-python = "~=3.12.0"
+
+
+
+[tool.black]
+line-length = 99
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/
+'''
+
+[tool.isort]
+profile = "black"
+known_first_party = ["corpus_truth_manipulation"]
+force_sort_within_sections = true
+
+
+

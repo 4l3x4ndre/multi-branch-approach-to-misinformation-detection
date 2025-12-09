@@ -1,0 +1,16 @@
+﻿architecture,accuracy,f1,precision,recall,roc_auc
+CLIP-Features,0.806,0.646,0.700,0.599,0.885
+CLIP-Features+DeepfakeDetector,0.807,0.649,0.702,0.603,0.887
+CLIP-Features+Encyclopedic,0.810,0.671,0.685,0.657,0.892
+CLIP-Image,0.753,0.559,0.593,0.529,0.840
+CLIP-Image+DeepfakeDetector,0.742,0.621,0.549,0.715,0.844
+CLIP-Image+DeepfakeDetector+Encyclopedic,0.773,0.567,0.649,0.504,0.849
+CLIP-Image+Encyclopedic,0.774,0.582,0.642,0.533,0.867
+CLIP-Text,0.777,0.571,0.659,0.504,0.845
+CLIP-Text+DeepfakeDetector,0.769,0.645,0.591,0.711,0.863
+CLIP-Text+DeepfakeDetector+Encyclopedic,0.773,0.622,0.612,0.632,0.866
+CLIP-Text+Encyclopedic,0.784,0.585,0.676,0.517,0.852
+DeepfakeDetector,0.761,0.533,0.629,0.463,0.829
+DeepfakeDetector+Encyclopedic,0.755,0.534,0.608,0.475,0.808
+Encyclopedic,0.708,0.048,0.667,0.025,0.774
+Global,0.797,0.647,0.667,0.628,0.861

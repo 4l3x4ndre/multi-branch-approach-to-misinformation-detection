@@ -1,0 +1,16 @@
+﻿architecture,accuracy,f1,recall
+CLIP-Features,0.875,0.933,0.875
+CLIP-Features+DeepfakeDetector,0.826,0.905,0.826
+CLIP-Features+Encyclopedic,0.806,0.893,0.806
+CLIP-Image,0.770,0.870,0.770
+CLIP-Image+DeepfakeDetector,0.838,0.912,0.838
+CLIP-Image+DeepfakeDetector+Encyclopedic,0.907,0.951,0.907
+CLIP-Image+Encyclopedic,0.875,0.933,0.875
+CLIP-Text,0.921,0.959,0.921
+CLIP-Text+DeepfakeDetector,0.932,0.965,0.932
+CLIP-Text+DeepfakeDetector+Encyclopedic,0.868,0.930,0.868
+CLIP-Text+Encyclopedic,0.918,0.957,0.918
+DeepfakeDetector,0.900,0.947,0.900
+DeepfakeDetector+Encyclopedic,0.985,0.992,0.985
+Encyclopedic,0.963,0.981,0.963
+Global,0.911,0.953,0.911

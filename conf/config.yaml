@@ -1,0 +1,50 @@
+model:
+  clip_name: "ViT-L/14"
+  clip_image_dim: 768
+  clip_text_dim: 768
+  fakedetector_name: "prithivMLmods/deepfake-detector-model-v1"
+  fakedetector_feature_dim: 768
+  global_classifier_input_dim: 1952
+  claimverifier_output_dim: 160  # = hidden_dim + hidden_dim + hidden_dim//2
+  graph_text_tokensizer: 'bert-base-uncased'
+  graph_text_embeddings: 'all-MiniLM-L6-v2' #'bert-base-uncased'
+  graph_text_encoder_dim: 384
+  kg_neighbor_limit: 25
+  claimverifier_int_dims: 128
+  claimverifier_hidden_dims: 128
+
+kg_label_cache_max_size: 7_000_000 # 2GB, 18_000_000 for 5GB
+seed: 42
+
+training:
+  epochs: 10
+  batch_size: 8
+  shuffle: true
+  num_workers: 0
+  criterion: "BCEWithLogits" # "BCE"
+  optimizer:  "Adam" # "SGD"
+  learning_rate: 0.0001
+  momentum: 0.9
+  gradient_clipping: 5 # 0 for no clipping
+  dropout: 0.2
+  global_layer_sizes: "input-1024-512-256-4"
+  use_deepfake_detector: True
+  use_clip: True
+  clip_use_image_features: True
+  clip_use_text_features: True
+  use_encyclopedic_knowledge: True
+
+logging:
+  frequency_log: 50
+  frequency_save: 500
+
+data:
+  batch_size: 2
+  shuffle: false
+  num_workers: 1
+  image_size: 224
+
+  real_image_fake_cls: ['original', 'mismatch', 'Incorrectly Captioned Images', 'Misattributed Images', 'De-contextualization']
+  real_image_sources: ['Repurposed Image']
+  real_claim_fake_cls: ['original', 'visual_veracity_distortion', 'mismatch']
+  mismatch_fake_cls: ['mismatch', 'Misattributed Images', 'De-contextualization']
